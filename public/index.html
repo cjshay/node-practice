@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="deviceSpeedCheck">
+  <head>
+    <meta charset="utf-8">
+    <title>ACR Dashboard</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheets/application.css" />
+  </head>
+  <body ng-controller="ScriptController as scriptCtrl">
+    <script type="text/javascript" src="./javascripts/dashboard.js"></script>
+    <section class="input-section">
+      <form id="device-id-form" ng-submit="scriptCtrl.script()">
+        <h3>{{scriptCtrl.deviceId}}</h3>
+        <div>Enter Device Id:</div>
+        <input ng-model="scriptCtrl.deviceId" type="text" >
+        <input type="submit" value="Check Response Time">
+      </form>
+
+    </section>
+
+  </body>
+</html>
